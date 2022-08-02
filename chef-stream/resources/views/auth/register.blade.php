@@ -91,7 +91,7 @@
                     <p>Login to your Account</p>
                     <button class="btn1" id="sign-in-btn">Sign in</button>
                 </div>
-                <img src="{{url('images/image3.png')}}" alt="" class="image">
+                <img src="{{url('/frontend/images/image3.png')}}" alt="" class="image">
             </div>
 
             <div class="panel right-panel">
@@ -100,7 +100,7 @@
                     <p>Want to be a part of our family?</p>
                     <button class="btn1" id="sign-up-btn">Sign up</button>
                 </div>
-                <img src="{{url("images/image2.png")}}" alt="" class="image">
+                <img src="{{url("/frontend/images/image2.png")}}" alt="" class="image">
             </div>
         </div>
     </div>
