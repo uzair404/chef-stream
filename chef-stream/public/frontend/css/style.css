@@ -22,6 +22,10 @@ body {
     overflow: hidden;
 }
 
+#submit-btn1{
+    visibility: hidden;
+}
+
 .container::before {
     content: "";
     position: absolute;
