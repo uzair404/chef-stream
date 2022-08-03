@@ -49,16 +49,12 @@
                 <p class="account-text">Don't have an account? <a href="{{url('/register')}}" id="sign-up-btn2">Sign Up</a></p>
             </form>
  
-            <x-auth-validation-errors class="mb-4" :errors="$errors" />
             <form action="{{ route('register') }}" method="POST" class="sign-up-form">
                 @csrf
                 <h2 class="title2">Sign Up</h2>
                 <div class="input-field2">
                     <i class="fas fa-user"></i>
                     <input type="text" placeholder="Username" name="name" value="{{old('name')}}">
-                    <span class="text-danger">@error('name')
-                        {{$message}}
-                    @enderror</span>
                 </div>
                 <div class="input-field2">
                     <i class="fas fa-envelope"></i>
