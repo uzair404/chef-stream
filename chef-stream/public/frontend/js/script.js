@@ -7,7 +7,9 @@ function callback() {
     let submitButton1 = document.getElementById("submit-btn1");
     // submitButton1.removeAttribute("disabled");
     submitButton1.removeAttribute("disabled");
-    document.getElementById("submit-btn1").style.visibility = "visible";
+    div.classList.remove('btn-lg');
+    div.classList.remove('btn');
+    div.classList.remove('btn-secondary');
   }
 
 

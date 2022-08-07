@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="{{url('/frontend/css/style.css')}}">
+    <link rel="stylesheet" href="{{url('/frontend/css/all.css')}}">
     <title>ChefStream</title>
 </head>
 <body>
@@ -69,7 +70,7 @@
                     <input type="password" placeholder="Confirm Password" name="password_confirmation">
                 </div>
                 <div class="g-recaptcha" data-sitekey="6Ldl3LwgAAAAAO_wFiej2vCzV6vtnLoKBBYsgsXy" data-callback="callback"></div>
-                <input disabled type="submit" value="Sign up" id="submit-btn1" name='signup' class="btn2">
+                <input disabled="disabled" type="submit" value="Sign up" id="submit-btn1" name='signup' class="btn2 btn btn-secondary btn-lg">
                 <p class="social-text">or</p>
                 <div class="social-media">
                     <a href="#" class="social-icon">

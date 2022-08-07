@@ -23,7 +23,7 @@ body {
 }
 
 #submit-btn1{
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .container::before {
