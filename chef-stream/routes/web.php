@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChangePassword;
+use App\Models\User;
+use App\Notifications\CustomEmail;
+use Illuminate\Support\Facades\Notification;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,19 @@ use App\Http\Controllers\ChangePassword;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/mail', function () {
+    $user = User::first();
+    $data = [
+        'name'=> $user->name,
+        'body' => 'my body',
+        'btn' => 'example button',
+        'url' => url('/dashboard')
+    ];
+    // $user->notify(new CustomEmail($data));
+    Notification::send($user, new CustomEmail($data));
+    return 'sended';
 });
 
 Route::get('/dashboard/setting', function () {
