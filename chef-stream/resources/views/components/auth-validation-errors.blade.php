@@ -6,8 +6,9 @@
             {{ __('Whoops! Something went wrong.') }}
         </div> --}}
         @foreach ($errors->all() as $error)
-        <div class="alert alert-danger" role="alert">
-            {{ $error }}
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Danger!</strong> {{ $error }}
           </div>
         @endforeach
 
