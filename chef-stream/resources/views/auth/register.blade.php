@@ -33,11 +33,18 @@
                 <label>
                     <input type="checkbox" name="remember" class="rememberme"> Remember me
                 </label>
+                <div class="flex items-center justify-end mt-4">
+                    @if (Route::has('password.request'))
+                        <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                            {{ __('Forgot your password?') }}
+                        </a>
+                    @endif
+                </div>
                 <input type="submit" value="Login" class="btn1">
                 
                 <p class="social-text">or</p>
                 <div class="social-media">
-                    <a href="#" class="social-icon">
+                    <a href="{{route('fb.login')}}" class="social-icon">
                         <i class="fab fa-facebook"></i>
                     </a>
                     <a href="#" class="social-icon">

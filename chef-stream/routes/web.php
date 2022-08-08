@@ -2,9 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChangePassword;
+use App\Http\Controllers\SocialController;
 use App\Models\User;
 use App\Notifications\CustomEmail;
 use Illuminate\Support\Facades\Notification;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,7 @@ use Illuminate\Support\Facades\Notification;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -50,3 +53,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('auth/facebook', [SocialController::class, 'facebookRedirect'])->name('fb.login');
+Route::get('/facebook/callback', [SocialController::class, 'loginWithFacebook']);
