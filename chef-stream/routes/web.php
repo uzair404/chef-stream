@@ -5,6 +5,7 @@ use App\Http\Controllers\ChangePassword;
 use App\Http\Controllers\SocialController;
 use App\Models\User;
 use App\Notifications\CustomEmail;
+use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\Notification;
 
 
@@ -24,6 +25,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/mail', function () {
     $user = User::first();
     $data = [
@@ -37,22 +39,31 @@ Route::get('/mail', function () {
     return 'sended';
 });
 
-Route::get('/dashboard/setting', function () {
+route::group(["prefix"=>'/dashboard', 'middleware'=>['auth','verified']], function(){
+
+Route::get('/setting', function () {
     return view('chef-dashboard.setting');
-})->middleware(['auth', 'verified']);
+});
 
-Route::get('/dashboard/password', [ChangePassword::class, "index"])->name('passwordpage')->middleware(['auth', 'verified']);
-Route::post('/dashboard/password', [ChangePassword::class, "change"])->name('changepass')->middleware(['auth', 'verified']);
+Route::get('/password', [ChangePassword::class, "index"])->name('passwordpage');
+Route::post('/password', [ChangePassword::class, "change"])->name('changepass');
 
-Route::get('/dashboard/courses', function () {
+Route::get('/courses', function () {
     return view('chef-dashboard.courses');
-})->middleware(['auth', 'verified']);
+});
 
-Route::get('/dashboard', function () {
+Route::get('', function () {
     return view('chef-dashboard.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->name('dashboard');
+
+});
 
 require __DIR__.'/auth.php';
 
+// facebook login
 Route::get('auth/facebook', [SocialController::class, 'facebookRedirect'])->name('fb.login');
 Route::get('/facebook/callback', [SocialController::class, 'loginWithFacebook']);
+Route::get('/facebook/newpass', [SocialController::class, 'enternewpass'])->middleware(['auth'])->name('enternewpass');
+Route::post('/facebook/newpass', [SocialController::class, 'storenewpass'])->middleware(['auth'])->name('facebooknewpass');
+Route::get('/facebook/enterpass', [SocialController::class, 'enterpass'])->middleware([])->name('facebookenterpass');
+Route::post('/facebook/storepass', [SocialController::class, 'storepass'])->middleware(['auth'])->name('facebookstorepass');
