@@ -5,7 +5,6 @@ use App\Http\Controllers\ChangePassword;
 use App\Http\Controllers\SocialController;
 use App\Models\User;
 use App\Notifications\CustomEmail;
-use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\Notification;
 
 
@@ -20,12 +19,12 @@ use Illuminate\Support\Facades\Notification;
 |
 */
 
-
+// welcome page 
 Route::get('/', function () {
     return view('welcome');
 });
 
-
+// testing mail 
 Route::get('/mail', function () {
     $user = User::first();
     $data = [
@@ -39,6 +38,7 @@ Route::get('/mail', function () {
     return 'sended';
 });
 
+// all dashboard routes
 route::group(["prefix"=>'/dashboard', 'middleware'=>['auth','verified']], function(){
 
 Route::get('/setting', function () {
@@ -58,6 +58,7 @@ Route::get('', function () {
 
 });
 
+// auth routes
 require __DIR__.'/auth.php';
 
 // facebook login
