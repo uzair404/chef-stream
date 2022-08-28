@@ -28,15 +28,15 @@
                 <div class="card">
                     <div>
                         <div class="numbers">5</div>
-                        <div class="cardName"><a href="#" id="view-btn">View Messages</a></div>
+                        <div class="cardName"><a href="#" id="view-btn">View Courses</a></div>
                     </div>
                     <div class="iconBox">
-                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <i class="fa fa-book" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <div class="numbers">$6,040</div>
+                        <div class="numbers">RS 16,040</div>
                         <div class="cardName"><a href="#" id="view-btn">View Payment</a></div>
                     </div>
                     <div class="iconBox">

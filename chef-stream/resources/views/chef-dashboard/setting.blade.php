@@ -37,14 +37,20 @@
                             <input type="text" id="cName" name="cName" required>
                         </div>
                     </div>
-                    <div class="selectorDiv">
-                        <div class="inputDiv">
+                    <div class="selectorDiv1">
+                        <div class="inputDiv1">
                             <label class="inputLabel" for="cName">Email Address</label>
                             <input type="text" id="cName" name="cName" required>
                         </div>
+                    </div>
+                    <div class="selectorDiv">
                         <div class="inputDiv">
-                            <label class="inputLabel" for="cName">Phone Number</label>
-                            <input type="text" id="cName" name="cName" required>
+                            <label class="inputLabel" for="cName">Phone number:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{7}" placeholder="0333-1234567">
+                        </div>
+                        <div class="inputDiv">
+                            <label class="inputLabel" for="cName">Age</label>
+                            <input type="number" id="cName" name="cName" required>
                         </div>
                     </div>
                     <div class="selectorDiv1">
@@ -53,13 +59,15 @@
                             <input type="text" id="cName" name="cName" required>
                         </div>
                     </div>
-                    <div class="selectorDiv">
-                        <div class="inputDiv">
-                            <label class="inputLabel" for="cName">Degrees</label>
+                    <div class="selectorDiv1">
+                        <div class="inputDiv1">
+                            <label class="inputLabel" for="cName">Certification</label>
                             <input type="text" id="cName" name="cName" required>
                         </div>
-                        <div class="inputDiv">
-                            <label class="inputLabel" for="cName">Awards</label>
+                    </div>
+                    <div class="selectorDiv1">
+                        <div class="inputDiv1">
+                            <label class="inputLabel" for="cName">Experience</label>
                             <input type="text" id="cName" name="cName" required>
                         </div>
                     </div>

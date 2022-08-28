@@ -15,6 +15,11 @@
                         <h2 class="formTitle">
                             Reset Password
                         </h2>
+
+                        <div class="inputDiv">
+                            <label class="inputLabel" for="password">Old Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
                     
                         <div class="inputDiv">
                             <label class="inputLabel" for="password">New Password</label>
