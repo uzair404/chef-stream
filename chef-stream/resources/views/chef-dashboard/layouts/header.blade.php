@@ -118,8 +118,8 @@
                         </a>
                         <div style="display: none" class="dropdown-menu" id="dd-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#">Switch to Student Dashboard</a>
-                            <a class="dropdown-item" href="#">Setting</a>
-                            <a class="dropdown-item" href="#">Log Out</a>
+                            <a class="dropdown-item" href="{{url('/dashboard/setting')}}">Setting</a>
+                            <a class="dropdown-item" href="{{route('logout')}}">Log Out</a>
                         </div>
                         </li>   
                     </ul>
