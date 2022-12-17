@@ -10,16 +10,16 @@
                 <div class="card">
                     <div>
                         <div class="numbers">Profile</div>
-                        <div class="cardName"><a href="#" id="view-btn">View Profile</a></div>
+                        <div class="cardName"><a href="{{url('dashboard/setting')}}" id="view-btn">View Profile</a></div>
                     </div>
                     <div class="iconBox">
-                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <i class="fa-solid fa-eye"></i>
                     </div>
                 </div>
                 <div class="card">
                     <div>
                         <div class="numbers">56</div>
-                        <div class="cardName"><a href="#" id="view-btn">View Students</a></div>
+                        <div class="cardName"><a href="{{url('dashboard/student')}}" id="view-btn">View Students</a></div>
                     </div>
                     <div class="iconBox">
                         <i class="fa fa-users" aria-hidden="true"></i>
@@ -28,7 +28,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">5</div>
-                        <div class="cardName"><a href="#" id="view-btn">View Courses</a></div>
+                        <div class="cardName"><a href="{{url('dashboard/manager')}}" id="view-btn">View Courses</a></div>
                     </div>
                     <div class="iconBox">
                         <i class="fa fa-book" aria-hidden="true"></i>
@@ -40,7 +40,7 @@
                         <div class="cardName"><a href="#" id="view-btn">View Payment</a></div>
                     </div>
                     <div class="iconBox">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        <i class="fa-solid fa-credit-card"></i>
                     </div>
                 </div>
             </div>

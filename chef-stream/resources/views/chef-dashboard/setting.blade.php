@@ -45,7 +45,7 @@
                     </div>
                     <div class="selectorDiv">
                         <div class="inputDiv">
-                            <label class="inputLabel" for="cName">Phone number:</label>
+                            <label class="inputLabel" for="cName">Phone number</label>
                             <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{7}" placeholder="0333-1234567">
                         </div>
                         <div class="inputDiv">

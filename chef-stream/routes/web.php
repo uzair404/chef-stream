@@ -52,6 +52,18 @@ Route::get('/courses', function () {
     return view('chef-dashboard.courses');
 });
 
+Route::get('/manager', function () {
+    return view('chef-dashboard.manager');
+});
+
+Route::get('/student', function () {
+    return view('chef-dashboard.student');
+});
+
+Route::get('/message', function () {
+    return view('chef-dashboard.message');
+});
+
 Route::get('', function () {
     return view('chef-dashboard.dashboard');
 })->name('dashboard');
