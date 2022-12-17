@@ -204,7 +204,6 @@ body {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
 }
 
 .cardBox .card .numbers {
@@ -235,8 +234,8 @@ body {
 .details .recentStudents {
     position: relative;
     display: grid;
-    align-content: space-evenly;
-    min-height: 480px;
+    align-content: center;
+    min-height: 100px;
     width: 152.5%;
     background: #fff;
     padding: 20px;
@@ -244,7 +243,7 @@ body {
 
 .cardHeader {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
 }
 
@@ -281,6 +280,17 @@ a:hover {
     margin-top: 10px;
 }
 
+.table_hd
+{
+    width: 80%;
+}
+
+.inputLabel {
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+  }
+
 .details table thead td {
     font-weight: 600;
 }
@@ -296,6 +306,11 @@ a:hover {
 .details .recentStudents table tbody tr:hover {
     background: #03a9f4;
     color: #fff;
+}
+
+#table_body tr:hover{
+    background: none;
+    color: black;
 }
 
 .details .recentStudents table tr td{
@@ -323,40 +338,6 @@ a:hover {
 .details .recentStudents table tbody tr td:nth-child(4){
     text-align: center;
     padding-right: 100px;
-}
-
-.status {
-    position: relative;
-    padding: 2px 4px;
-    color: #fff;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
-.delivered {
-    background: #8de02c;
-}
-
-.pending {
-    background: #f9ca3f;
-}
-
-.return {
-    background: #f00;
-}
-
-.inprogress {
-    background: #1795ce;
-}
-
-.details .recentCourses{
-    position: relative;
-    display: grid;
-    min-height: 530px;
-    background: #fff;
-    padding: 20px;
 }
 
 /* Responsive */

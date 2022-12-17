@@ -28,7 +28,7 @@
                 </div> 
                 <div class="input-field1">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" name="password"required autocomplete="current-password">
+                    <input type="password" placeholder="Password" name="password" required autocomplete="current-password">
                 </div>
                 <label>
                     <input type="checkbox" name="remember" class="rememberme"> Remember me
@@ -90,7 +90,7 @@
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
-                <p class="account-text">Already have an account? <a href="{{url('/login')}}" id="sign-in-btn2">Sign In</a></p>
+                <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Sign In</a></p>
             </form>
         </div>
         <div class="panels-container">
