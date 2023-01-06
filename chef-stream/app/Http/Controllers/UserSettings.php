@@ -29,6 +29,7 @@ class UserSettings extends Controller
         $UserSettings = ModelsUserSettings::where('user_id', Auth::user()->id)->first();
         if(!$UserSettings){
             $this->create_empty_setting();
+            $UserSettings = ModelsUserSettings::where('user_id', Auth::user()->id)->first();
         }
         $data['settings'] = $UserSettings;
         return view('chef-dashboard.setting')->with($data); 
