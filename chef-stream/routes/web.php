@@ -6,6 +6,7 @@ use App\Http\Controllers\SocialController;
 use App\Models\User;
 use App\Notifications\CustomEmail;
 use Illuminate\Support\Facades\Notification;
+use App\Http\Controllers\UserSettings;
 
 
 /*
@@ -41,9 +42,8 @@ Route::get('/mail', function () {
 // all dashboard routes
 route::group(["prefix"=>'/dashboard', 'middleware'=>['auth','verified']], function(){
 
-Route::get('/setting', function () {
-    return view('chef-dashboard.setting');
-});
+Route::get('/setting', [UserSettings::class, "index"]);
+Route::post('/setting', [UserSettings::class, "update"]);
 
 Route::get('/password', [ChangePassword::class, "index"])->name('passwordpage');
 Route::post('/password', [ChangePassword::class, "change"])->name('changepass');

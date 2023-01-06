@@ -126,3 +126,4 @@
                 </div>
             </div>
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
+            <x-auth-validation-success/>

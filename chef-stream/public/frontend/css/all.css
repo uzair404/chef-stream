@@ -3,6 +3,13 @@
     background-color: #f44336;
     color: white;
   }
+.alert-success {
+  margin: auto;
+  width: 30vw;
+  padding: 20px;
+  background-color: #22ee62;
+  color: rgb(0, 0, 0);
+  }
   
   .closebtn {
     margin-left: 15px;
